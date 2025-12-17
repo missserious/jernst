@@ -1,0 +1,59 @@
+name: Deploy Vite React App to GitHub Pages
+
+# Trigger: only when something is pushed to main
+on:
+  push:
+    branches:
+      - main
+
+# Permissions required for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Prevent multiple deploys from running simultaneously
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Fetch the Code from the Repository
+      - name: Checkout Code From Repository
+        uses: actions/checkout@v4
+
+      # Install Node.js + enable npm cache
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      # Install Dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # Run Build (tsc + Vite)
+      - name: Build
+        run: npm run build
+
+      # Upload Build output for Deployment
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build # wait for successful build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
