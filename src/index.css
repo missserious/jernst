@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -6,47 +6,58 @@
   box-sizing: border-box;
 }
 
-
+/* :root is equal to html element */
+/* Define: Global font, colour, line height */
 :root {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   font-weight: 300;
   color: #333333;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 rem;
-  text-align: center;
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
+  margin: 0 auto;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  min-width: 320px;
   min-height: 100vh;
+  /* width: 100%;       */
+  max-width: 1280px;
+  background-color: #ededed;
 }
 
-/* header {
-  background: #eee; 
-  margin: 0rem;
-  padding: 1rem;
-} */
+header {
+  color: #fff;
+  width: 100%;
+  height: 400px;
+  background-image: url("./assets/header.jpg");
+  background-size: cover;
+  background-position: center 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 main {
-  background: #aca4a4;
+  background: rgb(250, 255, 255);
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
   padding: 1rem;
+  align-items: center;
 }
 
 section {
-  background: #eee;
+  /* background: #eee; */
   margin: 1rem;
   padding: 1rem;
 }
 
 footer {
-  background: #ada6a6;
-  padding: 01rem;
+  background: #201e2c;
+  text-align: center;
+  padding: 40px 0px 40px 0px;
+  color: #fff;
 }
 
 /* 
@@ -56,13 +67,30 @@ footer {
 */
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* font-size: 3.2em; */
+  font-size: 82px;
+  line-height: 1;
+  font-weight: 100;
 }
 
 h2 {
-  font-size: 1.2em;
-  line-height: 1.1;
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 100;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 15px;
+  list-style-type: circle;
+  margin-bottom: 20px;
 }
 
 .duck {
