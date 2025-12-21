@@ -1,11 +1,16 @@
-export default function Header() {
+type HeaderProps = {
+  name?: string;
+  title?: string;
+};
+
+export default function Header({
+  name = "Julia Ernst",
+  title = "Geospatial Software Developer",
+}: HeaderProps) {
   return (
-    <>
-      {/* Header */}
-      <header>
-        <h1>Julia Ernst</h1>
-        <h2>Geospatial Software Developer</h2>
-      </header>
-    </>
+    <header>
+      <h1>{name}</h1>
+      <h2>{title}</h2>
+    </header>
   );
 }
