@@ -16,7 +16,6 @@
 }
 
 body {
-  /* margin: 0; */
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
@@ -27,31 +26,44 @@ body {
 
 header {
   position: relative;
-  color: #fff;
   width: 100%;
   height: 400px;
-
-  background-image: url("./assets/header.jpg");
-  background-size: cover;
-  background-position: center 70%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #fff;
   overflow: hidden;
-
-  /* start */
-  opacity: 0;
-
-  /* animation */
-  animation: fadeInHeader 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-@keyframes fadeInHeader {
+/* background image -> ::before */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/header.jpg");
+  background-size: cover;
+  background-position: center 70%;
+
+  /* intial state */
+  opacity: 0;
+  transform: scale(1.25);
+
+  /* animation */
+  animation: fadeZoomBG 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  z-index: -1;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeZoomBG {
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
