@@ -82,18 +82,42 @@ section {
   padding: 1rem;
 }
 
+.welcome-education-container {
+  display: flex;
+  /* gap: 5rem; */
+  /* gap: clamp(1rem, 5vw, 5rem); */
+  /* background-color: aqua; */
+}
+
+#welcome {
+  flex: 8;
+  /* background-color: antiquewhite; */
+}
+
+#education {
+  flex: 5;
+  /* background-color: antiquewhite; */
+}
+
+#profil {
+  flex: 6;
+  /* background-color: antiquewhite; */
+}
+
+#profil img {
+  display: block;
+  margin: 0;
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
 footer {
   background: #201e2c;
   text-align: center;
   padding: 40px 0px 40px 0px;
   color: #fff;
 }
-
-/* 
-#welcome {}
-#skills {} 
-#contact {} 
-*/
 
 h1 {
   /* font-size: 3.2em; */
@@ -114,6 +138,7 @@ h3 {
   line-height: 1;
   font-weight: 300;
   line-height: 1.5;
+  padding-bottom: 1rem;
 }
 
 ul {
