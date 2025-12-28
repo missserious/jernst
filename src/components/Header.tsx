@@ -4,8 +4,8 @@ type HeaderProps = {
 };
 
 export default function Header({
-  name = "Julia Ernst",
-  title = "Geospatial Software Developer",
+  name = 'Julia Ernst',
+  title = 'Geospatial Software Developer',
 }: HeaderProps) {
   return (
     <header>

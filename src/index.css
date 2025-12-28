@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 /* :root is equal to html element */
 /* TODO: define -> global font, colour, line height */
 :root {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 300;
   color: #333333;
@@ -39,10 +39,10 @@ header {
 
 /* background image -> ::before */
 header::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-image: url("./assets/header.jpg");
+  background-image: url('./assets/header.jpg');
   background-size: cover;
   background-position: center 70%;
 

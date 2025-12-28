@@ -1,5 +1,5 @@
-import happyDuck from "../assets/happy-duck.jpeg";
-import juliaErnst from "../assets/julia-ernst.png";
+import happyDuck from '../assets/happy-duck.jpeg';
+import juliaErnst from '../assets/julia-ernst.png';
 
 export default function Main() {
   return (
