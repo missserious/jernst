@@ -6,6 +6,7 @@ This is the new version of my website, built with **React**, **TypeScript**, and
 
 - Minimal Vite + React + TypeScript setup
 - Automatic deployment to GitHub Pages via GitHub Actions
+- Prettier and ESLint configured for consistent code style
 
 ## Deployment
 

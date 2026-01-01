@@ -8,7 +8,8 @@ export default function Header({
   title = 'Geospatial Software Developer',
 }: HeaderProps) {
   return (
-    <header>
+    <header className="header">
+      <h6 className="photo-credit">Photo by Christopher Roller</h6>
       <h1>{name}</h1>
       <h2>{title}</h2>
     </header>

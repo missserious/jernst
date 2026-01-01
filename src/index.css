@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@ body {
   background-color: #ededed;
 }
 
+/* Header & Background */
 header {
   position: relative;
   width: 100%;
@@ -37,7 +39,6 @@ header {
   overflow: hidden;
 }
 
-/* background image -> ::before */
 header::before {
   content: '';
   position: absolute;
@@ -67,6 +68,38 @@ header > * {
   }
 }
 
+.photo-credit {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  margin: 0;
+  opacity: 0.7;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.header h1 {
+  font-size: 82px;
+  line-height: 1;
+  font-weight: 100;
+}
+
+.header h2 {
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.header .photo-credit {
+  font-size: 8px;
+}
+
+/* Main Content */
 main {
   background: rgb(250, 255, 255);
   max-width: 1280px;
@@ -117,20 +150,6 @@ footer {
   text-align: center;
   padding: 40px 0px 40px 0px;
   color: #fff;
-}
-
-h1 {
-  /* font-size: 3.2em; */
-  font-size: 82px;
-  line-height: 1;
-  font-weight: 100;
-}
-
-h2 {
-  font-size: 35px;
-  line-height: 1;
-  font-weight: 100;
-  font-style: italic;
 }
 
 h3 {
