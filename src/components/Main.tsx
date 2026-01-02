@@ -7,25 +7,33 @@ export default function Main() {
       {/* Main Content */}
       <main>
         {/* CONTAINER */}
-        <div className="welcome-education-container">
+        <div className="welcome-education-profil-container">
           <section id="welcome">
-            <h3>HELLO</h3>
+            <h3>&gt; HELLO</h3>
             <p>
-              I'm passionate about everything related to geospatial data, from
-              databases and programming to web development and data
-              visualization. Over the past few years I've built a strong
-              foundation in GIS, full stack development, and quality assurance.
+              I'm passionate about everything related to{' '}
+              <strong>geospatial data</strong>, from{' '}
+              <strong>programming</strong> and <strong>web development</strong>{' '}
+              to <strong>databases</strong> and{' '}
+              <strong>data visualizatioin</strong>.
+              <br />
+              <br />
+              Over the past few years I’ve built a strong foundation in
+              <strong>Full-Stack Development</strong>, <strong>GIS</strong>, and{' '}
+              <strong>Quality Assurance</strong>.
+              <br />
+              <br />
               I'm always eager to learn, explore new tools, and find the most
-              efficient solutions to real world problems.
+              efficient solutions to real-world problems.
             </p>
           </section>
           <section id="education">
-            <h3>EDJUCATION</h3>
+            <h3>&gt; EDJUCATION</h3>
             <p>
               Master of Science <br />
-              Geodesy & Geoinformation Science <br />
+              <strong>Geodesy & Geoinformation Science</strong> <br />
               Bachelor of Science <br />
-              Computing and Media
+              <strong>Computing and Media</strong>
             </p>
           </section>
           <section id="profil">
@@ -35,18 +43,20 @@ export default function Main() {
         {/* CONTAINER: END */}
 
         {/* Skills Section */}
-        <section id="skills">
-          <h3>SKILLS</h3>
-          <div>
-            PROGRAMMING
-            <ul>
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Vite</li>
-              <li>Git / GitHub</li>
-            </ul>
-          </div>
-        </section>
+        <div className="skills-container">
+          <section id="skills">
+            <h3>&gt; SKILLS</h3>
+            <div>
+              PROGRAMMING
+              <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Vite</li>
+                <li>Git / GitHub</li>
+              </ul>
+            </div>
+          </section>
+        </div>
 
         {/* Contact Section */}
         <section id="contact">

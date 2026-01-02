@@ -26,7 +26,7 @@ body {
 }
 
 /* Header & Background */
-header {
+.header {
   position: relative;
   width: 100%;
   height: 400px;
@@ -39,7 +39,7 @@ header {
   overflow: hidden;
 }
 
-header::before {
+.header::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -105,21 +105,20 @@ main {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
   align-items: center;
 }
 
-section {
-  /* background: #eee; */
-  margin: 1rem;
-  padding: 1rem;
-}
+/* section { */
+/* background: #eee; */
+/* margin: 4rem; */
+/* padding-right: 4rem; */
+/* } */
 
-.welcome-education-container {
+.welcome-education-profil-container {
   display: flex;
-  /* gap: 5rem; */
+  padding: 5rem;
+  gap: 4rem;
   /* gap: clamp(1rem, 5vw, 5rem); */
-  /* background-color: aqua; */
 }
 
 #welcome {
@@ -133,7 +132,7 @@ section {
 }
 
 #profil {
-  flex: 6;
+  flex: 5;
   /* background-color: antiquewhite; */
 }
 
@@ -143,6 +142,49 @@ section {
   width: 250px;
   height: auto;
   object-fit: cover;
+}
+
+.skills-container {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  padding: 5rem;
+  gap: 4rem;
+}
+
+.skills-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./assets/bckgnd.jpg');
+  background-size: cover;
+  background-position: center 70%;
+
+  opacity: 0;
+  /* animation */
+  animation: parallaxFade 10.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  z-index: 0;
+}
+
+@keyframes parallaxFade {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.skills-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 footer {
@@ -158,6 +200,14 @@ h3 {
   font-weight: 300;
   line-height: 1.5;
   padding-bottom: 1rem;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 5rem;
 }
 
 ul {
