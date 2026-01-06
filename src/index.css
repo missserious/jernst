@@ -117,7 +117,7 @@ main {
 .welcome-education-profil-container {
   display: flex;
   padding: 5rem;
-  gap: 4rem;
+  gap: 3rem;
   /* gap: clamp(1rem, 5vw, 5rem); */
 }
 
@@ -150,7 +150,8 @@ main {
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  /* color: #fff; */
+  color: #aaa;
   overflow: hidden;
   display: flex;
   padding: 5rem;
@@ -187,10 +188,51 @@ main {
   z-index: 1;
 }
 
+.contact {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+}
+
+.contact h1 {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 100;
+}
+
+.contact h2 {
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 100;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
 footer {
   background: #201e2c;
   text-align: center;
-  padding: 40px 0px 40px 0px;
+  padding: 3rem 0px 1rem 0px;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: #aaa;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.footer a:hover {
   color: #fff;
 }
 
@@ -203,22 +245,19 @@ h3 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 300;
   line-height: 1.5;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+
+#education p span {
+  display: block;
 }
 
 ul {
   padding-left: 15px;
   list-style-type: circle;
   margin-bottom: 20px;
-}
-
-.duck {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
