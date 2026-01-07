@@ -57,3 +57,19 @@ chore: update npm dependencies
 improvement: render skill list
 refactor: simplify CSS structure
 ```
+
+## TODO / Checklist
+
+- [x] Add commit message guidelines
+- [ ] Clean up CSS structure
+- [ ] Refactor Main.tsx
+- [ ] Export commit guidelines to docs/ folder and link from README
+- [ ] Make website fully responsive using media queries
+- [ ] Migrate custom CSS to Tailwind CSS for styling
+- [ ] Protect main branch and allow merging only via pull requests
+- [ ] Add Prettier checks to GitHub Actions pipeline
+- [ ] Make website installable as PWA (create manifest file)
+- [ ] Refactor SEO Open Graph tags
+- [ ] Implement React internationalization (i18n)
+- [ ] Implement Analytics
+- [ ] Include tests for components, e.g. snapshot tests
