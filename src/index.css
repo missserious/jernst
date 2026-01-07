@@ -142,6 +142,7 @@ main {
   width: 250px;
   height: auto;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .skills-container {
@@ -150,12 +151,11 @@ main {
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  /* color: #fff; */
-  color: #aaa;
+  color: #fff;
   overflow: hidden;
   display: flex;
   padding: 5rem;
-  gap: 4rem;
+  /* gap: 4rem; */
 }
 
 .skills-container::before {
@@ -188,6 +188,29 @@ main {
   z-index: 1;
 }
 
+.skill-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.skill-section {
+  break-inside: avoid;
+  margin-bottom: 24px;
+}
+
+.skill-groups {
+  padding: 0;
+  margin: 0;
+}
+
+.skill-label {
+  font-weight: bold;
+}
+
 .contact {
   align-items: center;
   justify-content: center;
@@ -205,6 +228,15 @@ main {
   font-size: 35px;
   line-height: 1;
   font-weight: 100;
+}
+
+.contact a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #000;
 }
 
 hr {
@@ -229,7 +261,7 @@ footer {
 
 .footer a {
   color: #aaa;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer a:hover {
