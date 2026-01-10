@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-/* General */
+/* =====================
+   General / Reset / Fonts
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* :root is equal to html element */
-/* TODO: define -> global font, colour, line height */
 :root {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
@@ -20,12 +20,13 @@ body {
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
-  /* width: 100%;       */
   max-width: 1280px;
   background-color: #ededed;
 }
 
-/* Header & Background */
+/* =====================
+   Header
+===================== */
 .header {
   position: relative;
   width: 100%;
@@ -46,12 +47,8 @@ body {
   background-image: url('./assets/header.jpg');
   background-size: cover;
   background-position: center 70%;
-
-  /* intial state */
   opacity: 0;
   transform: scale(1.25);
-
-  /* animation */
   animation: fadeZoomBG 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   z-index: -1;
 }
@@ -59,27 +56,6 @@ body {
 header > * {
   position: relative;
   z-index: 1;
-}
-
-@keyframes fadeZoomBG {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.photo-credit {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  margin: 0;
-  opacity: 0.7;
-  z-index: 1;
-  white-space: nowrap;
-  pointer-events: none;
-
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
 }
 
 .header h1 {
@@ -95,11 +71,33 @@ header > * {
   font-style: italic;
 }
 
+.photo-credit {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  margin: 0;
+  opacity: 0.7;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
 .header .photo-credit {
   font-size: 8px;
 }
 
-/* Main Content */
+@keyframes fadeZoomBG {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =====================
+   Main Content
+===================== */
 main {
   background: rgb(250, 255, 255);
   max-width: 1280px;
@@ -108,32 +106,22 @@ main {
   align-items: center;
 }
 
-/* section { */
-/* background: #eee; */
-/* margin: 4rem; */
-/* padding-right: 4rem; */
-/* } */
-
 .welcome-education-profil-container {
   display: flex;
   padding: 5rem;
   gap: 3rem;
-  /* gap: clamp(1rem, 5vw, 5rem); */
 }
 
 #welcome {
   flex: 8;
-  /* background-color: antiquewhite; */
 }
 
 #education {
   flex: 5;
-  /* background-color: antiquewhite; */
 }
 
 #profil {
   flex: 5;
-  /* background-color: antiquewhite; */
 }
 
 #profil img {
@@ -145,6 +133,9 @@ main {
   max-width: 100%;
 }
 
+/* =====================
+   Skills
+===================== */
 .skills-container {
   position: relative;
   width: 100%;
@@ -154,7 +145,6 @@ main {
   color: #fff;
   overflow: hidden;
   padding: 5rem;
-  /* gap: 4rem; */
 }
 
 .skills-container::before {
@@ -164,22 +154,9 @@ main {
   background-image: url('./assets/bckgnd.jpg');
   background-size: cover;
   background-position: center 70%;
-
   opacity: 0;
-  /* animation */
   animation: parallaxFade 10.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   z-index: 0;
-}
-
-@keyframes parallaxFade {
-  from {
-    opacity: 0;
-    transform: translateY(-40px) scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 .skills-container > * {
@@ -191,7 +168,6 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
-
   column-count: 2;
   column-gap: 40px;
 }
@@ -210,6 +186,20 @@ main {
   font-weight: bold;
 }
 
+@keyframes parallaxFade {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================
+   Contact
+===================== */
 .contact {
   align-items: center;
   justify-content: center;
@@ -240,13 +230,9 @@ main {
   color: #000;
 }
 
-hr {
-  border: none;
-  height: 1px;
-  background-color: #ccc;
-  margin: 2rem 0;
-}
-
+/* =====================
+   Footer
+===================== */
 footer {
   background: #201e2c;
   text-align: center;
@@ -269,6 +255,9 @@ footer {
   color: #fff;
 }
 
+/* =====================
+   Typografie / Listen
+===================== */
 h3 {
   font-size: 25px;
   font-weight: 300;
@@ -291,4 +280,14 @@ ul {
   padding-left: 15px;
   list-style-type: circle;
   margin-bottom: 20px;
+}
+
+/* =====================
+   Trennlinien
+===================== */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
 }
