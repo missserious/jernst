@@ -12,7 +12,7 @@ export default function Main() {
       </div>
 
       <div className="skills-container">
-        <Skills />
+        <SkillList />
       </div>
 
       <Contact />
@@ -71,27 +71,36 @@ function ProfileImage() {
   );
 }
 
-function Skills() {
+function SkillList() {
   return (
     <>
       <h3>&gt; SKILLS</h3>
-
       <ul className="skill-container">
         {skills.map((section: SkillSection) => (
-          <li key={section.title} className="skill-section">
-            <div className="section-title">{section.title.toUpperCase()}</div>
-            <ul className="skill-groups">
-              {section.skills.map((skill: SkillGroup) => (
-                <li key={skill.label} className="skill-group">
-                  <span className="skill-label">{skill.label}: </span>
-                  <span className="skill-items">{skill.items.join(', ')}</span>
-                </li>
-              ))}
-            </ul>
-          </li>
+          <Skills key={section.title} section={section} />
         ))}
       </ul>
     </>
+  );
+}
+
+interface SkillsProps {
+  section: SkillSection;
+}
+
+function Skills({ section }: SkillsProps) {
+  return (
+    <li className="skill-section">
+      <div className="section-title">{section.title.toUpperCase()}</div>
+      <ul className="skill-groups">
+        {section.skills.map((skill: SkillGroup) => (
+          <li key={skill.label} className="skill-group">
+            <span className="skill-label">{skill.label}: </span>
+            <span className="skill-items">{skill.items.join(', ')}</span>
+          </li>
+        ))}
+      </ul>
+    </li>
   );
 }
 
