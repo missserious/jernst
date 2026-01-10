@@ -61,10 +61,12 @@ refactor: simplify CSS structure
 ## TODO / Checklist
 
 - [x] Add commit message guidelines
-- [ ] Clean up CSS structure
+- [x] Clean up CSS structure
+- [ ] Refactor: Font sizes, spacing, responsive design, dark mode
+- [ ] Mobil first
+- [ ] Make website fully responsive using media queries
 - [ ] Refactor Main.tsx
 - [ ] Export commit guidelines to docs/ folder and link from README
-- [ ] Make website fully responsive using media queries
 - [ ] Migrate custom CSS to Tailwind CSS for styling
 - [ ] Protect main branch and allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
