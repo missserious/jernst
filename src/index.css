@@ -10,10 +10,51 @@
 }
 
 :root {
+  /* =====================
+     Fonts / Text Defaults
+  ===================== */
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-weight: 300;
-  color: #333333;
+  color: #333333; /* default fallback */
+
+  /* =====================
+     TODO: Farbvariablen umbenennen & gruppieren
+     Idee:
+     --color-text-primary
+     --color-text-secondary
+     --color-bg-primary
+     --color-bg-secondary
+  ====================== */
+
+  /* =====================
+     Text Colors
+  ===================== */
+  --color-text-default: #333; /* Standardtext */
+  --color-text-heading: #fff; /* Header-Überschriften */
+  --color-text-footer: #aaa; /* Footer Texte */
+  --color-text-skills: #fff; /* Skills Section Text */
+
+  /* =====================
+     Link Colors
+  ===================== */
+  --color-link-default: #333; /* Normale Links im Content */
+  --color-link-hover: #000; /* Hover Links im Content */
+  --color-link-footer-hover: #fff; /* Hover Links im Footer */
+
+  /* =====================
+     Background Colors
+  ===================== */
+  --color-bg-body: #ededed; /* Body Hintergrund */
+  --color-bg-main: #faffff; /* Main Content Hintergrund */
+  --color-bg-footer: #201e2c; /* Footer Hintergrund */
+  --color-bg-header: #00000033; /* Optional overlay oder Fallback */
+  --color-bg-skills: #00000066; /* Overlay hinter Skills */
+
+  /* =====================
+     Borders / Dividers
+  ===================== */
+  --color-hr: #ccc; /* Trennlinien */
 }
 
 body {
@@ -21,7 +62,8 @@ body {
   padding: 0;
   min-height: 100vh;
   max-width: 1280px;
-  background-color: #ededed;
+  color: var(--color-text-default);
+  background-color: var(--color-bg-body);
 }
 
 /* =====================
@@ -36,7 +78,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-heading);
   overflow: hidden;
 }
 
@@ -82,6 +124,7 @@ header > * {
   pointer-events: none;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+  color: var(--color-text-heading);
 }
 
 .header .photo-credit {
@@ -99,7 +142,7 @@ header > * {
    Main Content
 ===================== */
 main {
-  background: rgb(250, 255, 255);
+  background-color: var(--color-bg-main);
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
@@ -142,7 +185,7 @@ main {
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--color-text-skills);
   overflow: hidden;
   padding: 5rem;
 }
@@ -157,6 +200,7 @@ main {
   opacity: 0;
   animation: parallaxFade 10.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   z-index: 0;
+  background-color: var(--color-bg-skills);
 }
 
 .skills-container > * {
@@ -220,39 +264,38 @@ main {
 }
 
 .contact a {
-  color: #333333;
+  color: var(--color-link-default);
   text-decoration: none;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
 
 .contact a:hover {
-  color: #000;
+  color: var(--color-link-hover);
 }
 
 /* =====================
    Footer
 ===================== */
 footer {
-  background: #201e2c;
   text-align: center;
   padding: 3rem 0px 1rem 0px;
-  color: #fff;
+  color: var(--color-text-footer);
+  background: var(--color-bg-footer);
 }
 
 .footer p {
   font-size: 0.9rem;
   letter-spacing: 0.05em;
-  color: #aaa;
 }
 
 .footer a {
-  color: #aaa;
+  color: var(--color-text-footer);
   text-decoration: none;
 }
 
 .footer a:hover {
-  color: #fff;
+  color: var(--color-link-footer-hover);
 }
 
 /* =====================
@@ -261,14 +304,12 @@ footer {
 h3 {
   font-size: 25px;
   font-weight: 300;
-  line-height: 1.5;
   padding-bottom: 1rem;
 }
 
 p {
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
   padding-bottom: 2rem;
 }
 
@@ -282,12 +323,16 @@ ul {
   margin-bottom: 20px;
 }
 
+a {
+  transition: color 0.2s ease;
+}
+
 /* =====================
    Trennlinien
 ===================== */
 hr {
   border: none;
   height: 1px;
-  background-color: #ccc;
+  background-color: var(--color-hr);
   margin: 2rem 0;
 }
