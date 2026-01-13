@@ -24,49 +24,21 @@ npm install
 npm run dev
 ```
 
-## Commit Messages
+## Commit & Development Guidelines
 
-To keep a clean and understandable git history, please follow this format for commit messages:
-
-```
-<type>: <short, descriptive message>
-```
-
-**Types:**
-
-- `feat` → New feature
-- `fix` → Bug fix
-- `docs` → Documentation changes
-- `chore` → Maintenance / setup changes
-- `refactor` → Code restructuring
-- `improvement` → Small improvements / optimizations
-
-**Message Guidelines:**
-
-- Write in imperative form (`Add ...`, `Fix ...`)
-- Keep it short and descriptive
-- Make each commit atomic (one logical change per commit)
-
-**Examples:**
-
-```
-feat: add new color scheme
-fix: correct header alignment
-docs: update README with instructions
-chore: update npm dependencies
-improvement: render skill list
-refactor: simplify CSS structure
-```
+Commit message conventions to keep a clean and readable git history.
+➡️ See the full guidelines here:  
+[Commit Guidelines](docs/commit_guidelines.md)
 
 ## TODO / Checklist
 
 - [x] Add commit message guidelines
+- [x] Export commit guidelines to docs/ folder and link from README
 - [x] Clean up CSS structure
 - [ ] Refactor: Font sizes, spacing, responsive design, dark mode
 - [ ] Mobil first
 - [ ] Make website fully responsive using media queries
 - [ ] Refactor Main.tsx
-- [ ] Export commit guidelines to docs/ folder and link from README
 - [ ] Migrate custom CSS to Tailwind CSS for styling
 - [ ] Protect main branch and allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
@@ -75,3 +47,4 @@ refactor: simplify CSS structure
 - [ ] Implement React internationalization (i18n)
 - [ ] Implement Analytics
 - [ ] Include tests for components, e.g. snapshot tests
+- [ ] Extend development guidelines (branching, PRs, code style, testing)
