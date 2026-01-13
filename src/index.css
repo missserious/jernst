@@ -11,20 +11,42 @@
 
 :root {
   /* =====================
-     Fonts / Text Defaults
+     Font Families
   ===================== */
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #333333; /* default fallback */
+  --font-family-base: 'Roboto', sans-serif;
 
   /* =====================
-     TODO: Farbvariablen umbenennen & gruppieren
-     Idee:
-     --color-text-primary
-     --color-text-secondary
-     --color-bg-primary
-     --color-bg-secondary
+     Font Weights
+  ===================== */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* =====================
+     Font Sizes 
+  ===================== */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 1.5625rem; /* 25px */
+  --font-size-xl: 2.1875rem; /* 35px */
+  --font-size-xxl: 4.5rem; /* 72px */
+  --font-size-hero: 5.125rem; /* 82px */
+
+  /* =====================
+     Line Heights
+  ===================== */
+  --line-height-tight: 1;
+  --line-height-normal: 1.5;
+
+  /* ===================== 
+  TODO: Farbvariablen umbenennen & gruppieren Idee: 
+  --color-text-primary 
+  --color-text-secondary 
+  --color-bg-primary 
+  --color-bg-secondary 
   ====================== */
 
   /* =====================
@@ -57,13 +79,20 @@
   --color-hr: #ccc; /* Trennlinien */
 }
 
+/* =====================
+   Body
+===================== */
 body {
-  margin: 0 auto;
-  padding: 0;
   min-height: 100vh;
   max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
   color: var(--color-text-default);
   background-color: var(--color-bg-body);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
 }
 
 /* =====================
@@ -78,8 +107,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--color-text-heading);
   overflow: hidden;
+  color: var(--color-text-heading);
 }
 
 .header::before {
@@ -91,8 +120,8 @@ body {
   background-position: center 70%;
   opacity: 0;
   transform: scale(1.25);
-  animation: fadeZoomBG 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   z-index: -1;
+  animation: fadeZoomBG 6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 header > * {
@@ -101,15 +130,17 @@ header > * {
 }
 
 .header h1 {
-  font-size: 82px;
-  line-height: 1;
-  font-weight: 100;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-thin);
+  line-height: var(--line-height-tight);
 }
 
 .header h2 {
-  font-size: 35px;
-  line-height: 1;
-  font-weight: 100;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-thin);
+  line-height: var(--line-height-tight);
   font-style: italic;
 }
 
@@ -119,16 +150,14 @@ header > * {
   left: 0.75rem;
   margin: 0;
   opacity: 0.7;
-  z-index: 1;
   white-space: nowrap;
   pointer-events: none;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+  z-index: 1;
   color: var(--color-text-heading);
-}
-
-.header .photo-credit {
-  font-size: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
 }
 
 @keyframes fadeZoomBG {
@@ -142,17 +171,17 @@ header > * {
    Main Content
 ===================== */
 main {
-  background-color: var(--color-bg-main);
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   align-items: center;
+  background-color: var(--color-bg-main);
 }
 
 .welcome-education-profil-container {
   display: flex;
-  padding: 5rem;
   gap: 3rem;
+  padding: 5rem;
 }
 
 #welcome {
@@ -181,13 +210,13 @@ main {
 ===================== */
 .skills-container {
   position: relative;
-  width: 100%;
-  min-height: 800px;
   display: flex;
   flex-direction: column;
-  color: var(--color-text-skills);
-  overflow: hidden;
+  width: 100%;
+  min-height: 800px;
   padding: 5rem;
+  overflow: hidden;
+  color: var(--color-text-skills);
 }
 
 .skills-container::before {
@@ -197,10 +226,10 @@ main {
   background-image: url('./assets/bckgnd.jpg');
   background-size: cover;
   background-position: center 70%;
-  opacity: 0;
-  animation: parallaxFade 10.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  z-index: 0;
   background-color: var(--color-bg-skills);
+  opacity: 0;
+  z-index: 0;
+  animation: parallaxFade 10.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .skills-container > * {
@@ -210,10 +239,10 @@ main {
 
 .skill-container {
   list-style: none;
-  padding: 0;
-  margin: 0;
   column-count: 2;
   column-gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .skill-section {
@@ -222,8 +251,8 @@ main {
 }
 
 .skill-groups {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .skill-label {
@@ -245,6 +274,8 @@ main {
    Contact
 ===================== */
 .contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -252,15 +283,17 @@ main {
 }
 
 .contact h1 {
-  font-size: 72px;
-  line-height: 1;
-  font-weight: 100;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-thin);
+  line-height: var(--line-height-tight);
 }
 
 .contact h2 {
-  font-size: 35px;
-  line-height: 1;
-  font-weight: 100;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-thin);
+  line-height: var(--line-height-tight);
 }
 
 .contact a {
@@ -268,6 +301,7 @@ main {
   text-decoration: none;
   word-break: break-word;
   overflow-wrap: anywhere;
+  transition: color 0.2s ease;
 }
 
 .contact a:hover {
@@ -279,14 +313,14 @@ main {
 ===================== */
 footer {
   text-align: center;
-  padding: 3rem 0px 1rem 0px;
+  padding: 3rem 0 1rem 0;
   color: var(--color-text-footer);
-  background: var(--color-bg-footer);
+  background-color: var(--color-bg-footer);
 }
 
 .footer p {
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-size: var(--font-size-sm);
+  /* letter-spacing: 0.05em; */
 }
 
 .footer a {
@@ -302,14 +336,16 @@ footer {
    Typografie / Listen
 ===================== */
 h3 {
-  font-size: 25px;
-  font-weight: 300;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
   padding-bottom: 1rem;
 }
 
 p {
-  font-size: 18px;
-  font-weight: 300;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
   padding-bottom: 2rem;
 }
 
