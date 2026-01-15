@@ -308,6 +308,10 @@ main {
   color: var(--color-link-hover);
 }
 
+.contact hr {
+  width: 100%;
+}
+
 /* =====================
    Footer
 ===================== */
