@@ -26,7 +26,7 @@ npm run dev
 
 ## Commit & Development Guidelines
 
-Commit message conventions to keep a clean and readable git history.
+Commit message conventions to keep a clean and readable git history.\
 ➡️ See the full guidelines here:  
 [Commit Guidelines](docs/commit_guidelines.md)
 
@@ -35,7 +35,10 @@ Commit message conventions to keep a clean and readable git history.
 - [x] Add commit message guidelines
 - [x] Export commit guidelines to docs/ folder and link from README
 - [x] Clean up CSS structure
-- [ ] Refactor: Font sizes, spacing, responsive design, dark mode
+- [x] Refactor and sort: Font, spacing
+- [ ] Refactor CSS: responsive design
+- [ ] Refactor CSS: dark mode
+- [ ] Research: VSC Plugig, highlighting unused vars, classes...
 - [ ] Mobil first
 - [ ] Make website fully responsive using media queries
 - [ ] Refactor Main.tsx
@@ -43,8 +46,10 @@ Commit message conventions to keep a clean and readable git history.
 - [ ] Protect main branch and allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
 - [ ] Make website installable as PWA (create manifest file)
+- [ ] PWA: Cash - Service Worker + Build-Assets
 - [ ] Refactor SEO Open Graph tags
 - [ ] Implement React internationalization (i18n)
 - [ ] Implement Analytics
 - [ ] Include tests for components, e.g. snapshot tests
 - [ ] Extend development guidelines (branching, PRs, code style, testing)
+- [ ] Typewriter Effect - welcome section
