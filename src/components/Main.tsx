@@ -28,7 +28,7 @@ function Welcome() {
         I'm passionate about everything related to{' '}
         <strong>geospatial data</strong>, from <strong>programming</strong> and{' '}
         <strong>web development</strong> to <strong>databases</strong> and{' '}
-        <strong>data visualizatioin</strong>.
+        <strong>data visualization</strong>.
       </p>
       <p>
         Over the past few years I've built a strong foundation in{' '}
