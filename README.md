@@ -36,11 +36,10 @@ Commit message conventions to keep a clean and readable git history.\
 - [x] Export commit guidelines to docs/ folder and link from README
 - [x] Clean up CSS structure
 - [x] Refactor and sort: Font, spacing
-- [ ] Refactor CSS: responsive design
+- [ ] Refactor CSS: Mobil first- responsive design
+- [ ] Make website fully responsive using media queries
 - [ ] Refactor CSS: dark mode
 - [ ] Research: VSC Plugig, highlighting unused vars, classes...
-- [ ] Mobil first
-- [ ] Make website fully responsive using media queries
 - [ ] Refactor Main.tsx
 - [ ] Migrate custom CSS to Tailwind CSS for styling
 - [ ] Protect main branch and allow merging only via pull requests
@@ -53,3 +52,4 @@ Commit message conventions to keep a clean and readable git history.\
 - [ ] Include tests for components, e.g. snapshot tests
 - [ ] Extend development guidelines (branching, PRs, code style, testing)
 - [ ] Typewriter Effect - welcome section
+- [ ] Implementing Routing: HashRouter or BrowserRouter
