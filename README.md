@@ -38,6 +38,7 @@ Commit message conventions to keep a clean and readable git history.\
 - [x] Refactor and sort: Font, spacing
 - [ ] Refactor CSS: Mobil first- responsive design
 - [ ] Make website fully responsive using media queries
+- [ ] Include Icons: linkedIn and github
 - [ ] Refactor CSS: dark mode
 - [ ] Research: VSC Plugig, highlighting unused vars, classes...
 - [ ] Refactor Main.tsx

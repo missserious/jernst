@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+/* Extra small devices (Phones) */
+/* @media (min-width: 576px) {} */
+
+/* Small devices (Tablets) */
+/* @media (min-width: 768px) {} */
+
+/* Medium devices (Laptops) */
+/* @media (min-width: 992px) {} */
+
+/* Large devices (Desktops) */
+/* @media (min-width: 1200px) {} */
+
+/* Extra large screens */
+/* @media (min-width: 1400px) {} */
+
 /* =====================
    General / Reset / Fonts
 ===================== */
@@ -286,22 +301,24 @@ main {
   z-index: 1;
 }
 
-.skill-container {
-  list-style: none;
-  column-count: 2;
-  column-gap: 40px;
-  margin: 0;
-  padding: 0;
-}
+@media screen and (min-width: 992px) {
+  .skill-container {
+    list-style: none;
+    column-count: 2;
+    column-gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
 
-.skill-section {
-  break-inside: avoid;
-  margin-bottom: 24px;
-}
+  .skill-section {
+    break-inside: avoid;
+    margin-bottom: 24px;
+  }
 
-.skill-groups {
-  margin: 0;
-  padding: 0;
+  .skill-groups {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .skill-label {
