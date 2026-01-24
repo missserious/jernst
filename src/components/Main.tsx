@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import juliaErnst from '../assets/julia-ernst.webp';
 import skills from '../data/data';
 import type { SkillSection, SkillGroup } from '../data/data';
@@ -23,7 +24,7 @@ export default function Main() {
 function Welcome() {
   return (
     <section id="welcome">
-      <h3>&gt; HELLO</h3>
+      <h3>HELLO</h3>
       <div className="responsive">
         <p>
           I'm passionate about everything related to{' '}
@@ -61,7 +62,7 @@ function Welcome() {
 function Education() {
   return (
     <section id="education">
-      <h3>&gt; EDJUCATION</h3>
+      <h3>EDJUCATION</h3>
       <p>
         <span>Master of Science</span>
         <span>
@@ -81,7 +82,7 @@ function Education() {
 function ProfileImage() {
   return (
     <section id="profil">
-      <img src={juliaErnst} alt="Julia Ernst" />
+      <img src={juliaErnst} alt="Julia Ernst" className="profile-picture" />
     </section>
   );
 }
@@ -89,7 +90,7 @@ function ProfileImage() {
 function SkillList() {
   return (
     <>
-      <h3>&gt; SKILLS</h3>
+      <h3>SKILLS</h3>
       <ul className="skill-container">
         {skills.map((section: SkillSection) => (
           <Skills key={section.title} section={section} />
@@ -104,17 +105,37 @@ interface SkillsProps {
 }
 
 function Skills({ section }: SkillsProps) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  function handleToggle() {
+    setIsOpen(isOpen => !isOpen);
+  }
+
   return (
-    <li className="skill-section">
-      <div className="section-title">{section.title.toUpperCase()}</div>
-      <ul className="skill-groups">
-        {section.skills.map((skill: SkillGroup) => (
-          <li key={skill.label} className="skill-group">
-            <span className="skill-label">{skill.label}: </span>
-            <span className="skill-items">{skill.items.join(', ')}</span>
-          </li>
-        ))}
-      </ul>
+    <li
+      className={`skill-section ${isOpen ? 'open' : ''}`}
+      onClick={handleToggle}
+    >
+      <span className="section-title">{section.title.toUpperCase()}</span>
+      <span className="icon">{isOpen ? '+' : '-'}</span>
+      {isOpen && (
+        <ul className="skill-groups">
+          {section.skills.map((skill: SkillGroup) => (
+            <li key={skill.label} className="skill-group">
+              <span className="skill-label">{skill.label}: </span>
+              {/* <span className="skill-items">{skill.items.join(', ')}</span> */}
+
+              <span className="skill-items">
+                {skill.items.map(item => (
+                  <span key={item} className="skill-item">
+                    {item}
+                  </span>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 }
