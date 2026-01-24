@@ -6,10 +6,10 @@ import type { SkillSection, SkillGroup } from '../data/data';
 export default function Main() {
   return (
     <main>
-      <div className="welcome-education-profil-container">
+      <div className="welcome-education-profile-container">
+        <ProfileImage />
         <Welcome />
         <Education />
-        <ProfileImage />
       </div>
 
       <div className="skills-container">
@@ -24,7 +24,7 @@ export default function Main() {
 function Welcome() {
   return (
     <section id="welcome">
-      <h3>HELLO</h3>
+      {/* <h3>HELLO</h3> */}
       <div className="responsive">
         <p>
           I'm passionate about everything related to{' '}
@@ -62,7 +62,7 @@ function Welcome() {
 function Education() {
   return (
     <section id="education">
-      <h3>EDJUCATION</h3>
+      <h3>EDUCATION</h3>
       <p>
         <span>Master of Science</span>
         <span>
@@ -81,7 +81,7 @@ function Education() {
 
 function ProfileImage() {
   return (
-    <section id="profil">
+    <section id="profile">
       <img src={juliaErnst} alt="Julia Ernst" className="profile-picture" />
     </section>
   );
@@ -117,7 +117,7 @@ function Skills({ section }: SkillsProps) {
       onClick={handleToggle}
     >
       <span className="section-title">{section.title.toUpperCase()}</span>
-      <span className="icon">{isOpen ? '+' : '-'}</span>
+      <span className="icon">{isOpen ? '-' : '+'}</span>
       {isOpen && (
         <ul className="skill-groups">
           {section.skills.map((skill: SkillGroup) => (

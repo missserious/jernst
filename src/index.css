@@ -195,11 +195,31 @@ main {
 }
 
 /* Mobil first */
-.welcome-education-profil-container {
+.welcome-education-profile-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0rem;
+  padding: 5rem;
+  position: relative;
+}
+
+#profile {
+  order: 1; /* Profilbild oben */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#profile img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  /* border-radius: 50%; 
+  border: 4px solid white;  */
+}
+/* Mobile */
+#welcome {
+  order: 2;
 }
 
 #welcome p {
@@ -207,20 +227,8 @@ main {
   text-align-last: left;
 }
 
-#profil img {
-  display: block;
-  margin: 0;
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  max-width: 100%;
-}
-
-#profil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+#education {
+  order: 3;
 }
 
 .profile-picture {
@@ -235,32 +243,37 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
-  .welcome-education-profil-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3rem;
-    padding: 5rem 5rem;
-    align-items: flex-start;
+@media screen and (min-width: 992px) {
+  .welcome-education-profile-container {
+    flex-direction: column; /* Spalten bleiben */
+    position: relative;
   }
 
   #welcome {
-    flex: 0 0 100%;
-    max-width: 100%;
+    order: 2;
+    padding-right: 34%;
+  }
+
+  #welcome p {
+    text-align: left;
+    text-align-last: auto;
   }
 
   #education {
-    flex: 2;
+    order: 3;
   }
 
-  #profil {
-    flex: 6;
-    display: flex;
-    justify-content: center;
+  #profile {
+    order: 1;
+    position: absolute;
+    top: -50px; /* leicht über Header */
+    right: 7rem;
+    width: 250px;
+    z-index: 2;
   }
 
-  #profil img {
-    max-width: 200px;
+  #profile img {
+    max-width: 250px;
     width: 100%;
     height: auto;
   }
@@ -339,7 +352,7 @@ ul.skill-groups {
 }
 
 .skill-section.open .icon {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .skill-items span {
