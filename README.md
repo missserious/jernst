@@ -4,9 +4,10 @@ This is the new version of my website, built with **React**, **TypeScript**, and
 
 ## Features
 
-- Minimal Vite + React + TypeScript setup
-- Automatic deployment to GitHub Pages via GitHub Actions
-- Prettier and ESLint configured for consistent code style
+- ⚡ Minimal Vite + React + TypeScript setup
+- 🚀 Automatic deployment to GitHub Pages via GitHub Actions
+- 🛠️ Prettier and ESLint configured for consistent code style
+- 📱 Installable Progressive Web App (PWA)
 
 ## Deployment
 
@@ -43,9 +44,10 @@ Commit message conventions to keep a clean and readable git history.\
 - [ ] Refactor Main.tsx
 - [ ] Research: VSC Plugig, highlighting unused vars, classes...
 - [ ] PWA Support:
-  - [ ] Make website installable as PWA (create manifest file)
+  - [x] Make website installable as PWA (create manifest file)
   - [ ] Include button to install PWA
   - [ ] Make PWA offline usable (create service worker)
+  - [ ] Optional: Use vite-plugin-pwa
 - [ ] Migrate custom CSS to Tailwind CSS for styling
 - [ ] Protect main branch and allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
