@@ -34,19 +34,21 @@ Commit message conventions to keep a clean and readable git history.\
 
 - [x] Add commit message guidelines
 - [x] Export commit guidelines to docs/ folder and link from README
-- [x] Clean up CSS structure
-- [x] Refactor and sort: Font, spacing
-- [ ] Refactor CSS: Mobil first- responsive design
-- [ ] Make website fully responsive using media queries
+- [ ] Refactor/Improve CSS:
+  - [ ] Mobil first
+  - [ ] Fully responsive
+  - [ ] Clean up CSS: font, color, spacing
+  - [ ] Refactor CSS: dark mode
 - [ ] Include Icons: linkedIn and github
-- [ ] Refactor CSS: dark mode
-- [ ] Research: VSC Plugig, highlighting unused vars, classes...
 - [ ] Refactor Main.tsx
+- [ ] Research: VSC Plugig, highlighting unused vars, classes...
+- [ ] PWA Support:
+  - [ ] Make website installable as PWA (create manifest file)
+  - [ ] Include button to install PWA
+  - [ ] Make PWA offline usable (create service worker)
 - [ ] Migrate custom CSS to Tailwind CSS for styling
 - [ ] Protect main branch and allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
-- [ ] Make website installable as PWA (create manifest file)
-- [ ] PWA: Cash - Service Worker + Build-Assets
 - [ ] Refactor SEO Open Graph tags
 - [ ] Implement React internationalization (i18n)
 - [ ] Implement Analytics
@@ -54,3 +56,4 @@ Commit message conventions to keep a clean and readable git history.\
 - [ ] Extend development guidelines (branching, PRs, code style, testing)
 - [ ] Typewriter Effect - welcome section
 - [ ] Implementing Routing: HashRouter or BrowserRouter
+- [ ] Print Version
