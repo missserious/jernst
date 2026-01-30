@@ -117,14 +117,14 @@ function Skills({ section }: SkillsProps) {
       onClick={handleToggle}
     >
       <span className="section-title">{section.title.toUpperCase()}</span>
-      <span className="icon">{isOpen ? '-' : '+'}</span>
+      <span className="icon">›</span>
+
       {isOpen && (
         <ul className="skill-groups">
           {section.skills.map((skill: SkillGroup) => (
             <li key={skill.label} className="skill-group">
               <span className="skill-label">{skill.label}: </span>
               {/* <span className="skill-items">{skill.items.join(', ')}</span> */}
-
               <span className="skill-items">
                 {skill.items.map(item => (
                   <span key={item} className="skill-item">
