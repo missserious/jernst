@@ -183,6 +183,12 @@ main {
   width: 100%;
   height: auto;
 }
+
+/* Default: 3 Absätze */
+.welcome-text p {
+  display: block;
+  margin-bottom: 1rem;
+}
 /* Mobile */
 #welcome {
   order: 2;
@@ -203,10 +209,6 @@ main {
 
 .profile-picture:hover {
   transform: scale(1.05);
-}
-
-.merged {
-  display: none;
 }
 
 /* =====================
@@ -302,6 +304,14 @@ ul.skill-groups {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links a {
+  padding: 0px 1rem 0px 1rem;
 }
 
 /* =====================

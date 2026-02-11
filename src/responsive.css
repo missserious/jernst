@@ -51,11 +51,18 @@
     line-height: 1.65; /* TODO: */
   }
 
-  .responsive {
-    display: none; /* alle einzelnen verstecken */
+  .welcome-text {
+    display: block; /* optional */
   }
-  .merged {
-    display: block; /* zusammengefasster Paragraph */
+
+  .welcome-text p {
+    display: inline; /* Absätze inline machen */
+    margin: 0; /* Abstände entfernen */
+  }
+
+  /* Optional: kleine Trennung */
+  .welcome-text p + p::before {
+    content: ' '; /* Leerzeichen zwischen ursprünglichen Absätzen */
   }
 
   /* =====================

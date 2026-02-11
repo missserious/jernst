@@ -3,6 +3,11 @@ import juliaErnst from '../assets/julia-ernst.webp';
 import skills from '../data/data';
 import type { SkillSection, SkillGroup } from '../data/data';
 
+import { IoLogoLinkedin } from 'react-icons/io5';
+import { IoLogoGithub } from 'react-icons/io5';
+// import { LiaCookieBiteSolid } from 'react-icons/lia';
+// import { MdInstallMobile } from 'react-icons/md';
+
 export default function Main() {
   return (
     <main>
@@ -14,6 +19,7 @@ export default function Main() {
 
       <div className="skills-container">
         <SkillList />
+        <SocialLinks />
       </div>
 
       <Contact />
@@ -24,8 +30,7 @@ export default function Main() {
 function Welcome() {
   return (
     <section id="welcome">
-      {/* <h3>HELLO</h3> */}
-      <div className="responsive">
+      <div className="welcome-text">
         <p>
           I'm passionate about everything related to{' '}
           <strong>geospatial data</strong>, from <strong>programming</strong>{' '}
@@ -40,19 +45,6 @@ function Welcome() {
         <p>
           I'm always eager to learn, explore new tools, and find the most
           efficient solutions to real-world problems.
-        </p>
-      </div>
-
-      <div className="responsive merged">
-        <p>
-          I'm passionate about everything related to{' '}
-          <strong>geospatial data</strong>, from <strong>programming</strong>{' '}
-          and <strong>web development</strong> to <strong>databases</strong> and{' '}
-          <strong>data visualization</strong>. Over the past few years I've
-          built a strong foundation in <strong>Full-Stack Development</strong>,{' '}
-          <strong>GIS</strong>, and <strong>Quality Assurance</strong>. I'm
-          always eager to learn, explore new tools, and find the most efficient
-          solutions to real-world problems.
         </p>
       </div>
     </section>
@@ -91,12 +83,28 @@ function SkillList() {
   return (
     <>
       <h3>SKILLS</h3>
+      {/* TODO: Fest auf zwei Spalten aufteilen */}
       <ul className="skill-container">
         {skills.map((section: SkillSection) => (
           <Skills key={section.title} section={section} />
         ))}
       </ul>
     </>
+  );
+}
+
+// <LiaCookieBiteSolid size={50} color="orange" />
+// <MdInstallMobile size={50} />
+function SocialLinks() {
+  return (
+    <div className="social-links">
+      <a href="https://www.linkedin.com/in/juernst/">
+        <IoLogoLinkedin size={70} color="white" />
+      </a>
+      <a href="https://github.com/missserious/">
+        <IoLogoGithub size={70} color="white" />
+      </a>
+    </div>
   );
 }
 
