@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import juliaErnst from '../assets/julia-ernst.webp';
-import skills from '../data/data';
-import type { SkillSection, SkillGroup } from '../data/data';
+
+import skills from '../../data/data';
+import type { SkillSection, SkillGroup } from '../../data/data';
 
 import { IoLogoLinkedin } from 'react-icons/io5';
 import { IoLogoGithub } from 'react-icons/io5';
-// import { LiaCookieBiteSolid } from 'react-icons/lia';
-// import { MdInstallMobile } from 'react-icons/md';
+
+import { Welcome } from './Welcome';
+import { Education } from './Education';
+import { ProfileImage } from './ProfileImage';
 
 export default function Main() {
   return (
@@ -27,58 +29,6 @@ export default function Main() {
   );
 }
 
-function Welcome() {
-  return (
-    <section id="welcome">
-      <div className="welcome-text">
-        <p>
-          I'm passionate about everything related to{' '}
-          <strong>geospatial data</strong>, from <strong>programming</strong>{' '}
-          and <strong>web development</strong> to <strong>databases</strong> and{' '}
-          <strong>data visualization</strong>.
-        </p>
-        <p>
-          Over the past few years I've built a strong foundation in{' '}
-          <strong>Full-Stack Development</strong>, <strong>GIS</strong>, and{' '}
-          <strong>Quality Assurance</strong>.
-        </p>
-        <p>
-          I'm always eager to learn, explore new tools, and find the most
-          efficient solutions to real-world problems.
-        </p>
-      </div>
-    </section>
-  );
-}
-
-function Education() {
-  return (
-    <section id="education">
-      <h3>EDUCATION</h3>
-      <p>
-        <span>Master of Science</span>
-        <span>
-          <strong>Geodesy & Geoinformation Science</strong>{' '}
-        </span>
-      </p>
-      <p>
-        <span>Bachelor of Science</span>
-        <span>
-          <strong>Computing and Media</strong>
-        </span>
-      </p>
-    </section>
-  );
-}
-
-function ProfileImage() {
-  return (
-    <section id="profile">
-      <img src={juliaErnst} alt="Julia Ernst" className="profile-picture" />
-    </section>
-  );
-}
-
 function SkillList() {
   return (
     <>
@@ -93,8 +43,6 @@ function SkillList() {
   );
 }
 
-// <LiaCookieBiteSolid size={50} color="orange" />
-// <MdInstallMobile size={50} />
 function SocialLinks() {
   return (
     <div className="social-links">
