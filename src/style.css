@@ -220,7 +220,7 @@ main {
   flex-direction: column;
   width: 100%;
   /* min-height: 800px; */
-  padding: 3rem 2rem 3rem 2rem;
+  padding: 3rem 2rem 3rem 4rem;
   overflow: hidden;
   color: var(--color-text-skills);
 }
@@ -306,14 +306,27 @@ ul.skill-groups {
   }
 }
 
+/* =====================
+   Social Links
+===================== */
+
 .social-links {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .social-links a {
   padding: 0px 1rem 0px 1rem;
+  display: inline-block;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  cursor: pointer; /* zeigt Interaktivität */
 }
 
+.social-links a:hover {
+  transform: scale(1.1);
+}
 /* =====================
    Contact
 ===================== */
