@@ -68,23 +68,21 @@
   /* =====================
    Skills
   ===================== */
-  .skill-container {
+
+  .skills-columns {
+    display: flex;
+    gap: 40px; /* Abstand zwischen den Spalten */
+  }
+
+  .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* die Elemente in der Spalte rutschen nach oben */
+    gap: 24px; /* Abstand zwischen Sections */
     list-style: none;
-    column-count: 2;
-    column-gap: 40px;
-    margin: 0;
     padding: 0;
   }
 
-  .skill-section {
-    break-inside: avoid;
-    margin-bottom: 24px;
-  }
-
-  .skill-groups {
-    margin: 0;
-    padding: 0;
-  }
   /* =====================
    Contact
   ===================== */

@@ -42,6 +42,18 @@ const skills: SkillSection[] = [
     ],
   },
   {
+    title: 'DevOps & Deployment',
+    skills: [
+      { label: 'CI/CD', items: ['GitLab CI/CD', 'GitHub Actions'] },
+      {
+        label: 'Containerization & Deployment',
+        items: ['Docker', 'Docker Compose'],
+      },
+      { label: 'Linux & Web Servers', items: ['Ubuntu', 'Apache', 'Tomcat'] },
+      { label: 'Version Control & Documentation', items: ['GitLab', 'GitHub'] },
+    ],
+  },
+  {
     title: 'Web Development',
     skills: [
       {
@@ -56,6 +68,18 @@ const skills: SkillSection[] = [
     ],
   },
   {
+    title: 'Test Automation & Manual Testing',
+    skills: [
+      { label: 'GUI / Desktop Testing', items: ['Squish'] },
+      { label: 'Test Frameworks', items: ['Robot Framework', 'pytest'] },
+      { label: 'API Testing', items: ['Postman'] },
+      {
+        label: 'Manual Testing',
+        items: ['smoke tests', 'exploratory testing'],
+      },
+    ],
+  },
+  {
     title: 'Databases',
     skills: [
       {
@@ -64,6 +88,24 @@ const skills: SkillSection[] = [
       },
       { label: 'ORM Experience', items: ['Django ORM'] },
       { label: 'Database Tools', items: ['DBeaver'] },
+    ],
+  },
+  {
+    title: 'Project Management & Collaboration',
+    skills: [
+      {
+        label: 'Tools / Platforms',
+        items: ['Jira/Zephyr Scale', 'Confluence', 'Redmine', 'Git', 'Slack', 'Miro'],
+      },
+      { label: 'Methods / Workflows', items: ['Agile', 'Kanban', 'Scrum'] },
+      {
+        label: 'Processes',
+        items: ['Technical documentation and coordination'],
+      },
+      {
+        label: 'Documentation / Reporting',
+        items: ['Office', 'Google Sheets', 'LaTeX', 'Markdown'],
+      },
     ],
   },
   {
@@ -95,48 +137,6 @@ const skills: SkillSection[] = [
           'GeoJSON',
           'GeoPackage',
         ],
-      },
-    ],
-  },
-  {
-    title: 'DevOps & Deployment',
-    skills: [
-      { label: 'CI/CD', items: ['GitLab CI/CD', 'GitHub Actions'] },
-      {
-        label: 'Containerization & Deployment',
-        items: ['Docker', 'Docker Compose'],
-      },
-      { label: 'Linux & Web Servers', items: ['Ubuntu', 'Apache', 'Tomcat'] },
-      { label: 'Version Control & Documentation', items: ['GitLab', 'GitHub'] },
-    ],
-  },
-  {
-    title: 'Test Automation & Manual Testing',
-    skills: [
-      { label: 'GUI / Desktop Testing', items: ['Squish'] },
-      { label: 'Test Frameworks', items: ['Robot Framework', 'pytest'] },
-      { label: 'API Testing', items: ['Postman'] },
-      {
-        label: 'Manual Testing',
-        items: ['smoke tests', 'exploratory testing'],
-      },
-    ],
-  },
-  {
-    title: 'Project Management & Collaboration',
-    skills: [
-      {
-        label: 'Tools / Platforms',
-        items: ['Jira/Zephyr Scale', 'Confluence', 'Redmine', 'Git', 'Slack', 'Miro'],
-      },
-      { label: 'Methods / Workflows', items: ['Agile', 'Kanban', 'Scrum'] },
-      {
-        label: 'Processes',
-        items: ['Technical documentation and coordination'],
-      },
-      {
-        label: 'Documentation / Reporting',
-        items: ['Office', 'Google Sheets', 'LaTeX', 'Markdown'],
       },
     ],
   },
