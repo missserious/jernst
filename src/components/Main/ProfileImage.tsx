@@ -5,10 +5,7 @@ interface ProfilImageProps {
   alt?: string;
 }
 
-export function ProfileImage({
-  src = juliaErnst,
-  alt = 'Julia Ernst',
-}: ProfilImageProps) {
+export function ProfileImage({ src = juliaErnst, alt = 'Julia Ernst' }: ProfilImageProps) {
   return (
     <section id="profile">
       <figure>

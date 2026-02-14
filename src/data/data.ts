@@ -14,12 +14,7 @@ const skills: SkillSection[] = [
     skills: [
       {
         label: 'Languages',
-        items: [
-          'Python',
-          'JavaScript/TypeScript',
-          'Java',
-          'Bash/Shell scripting',
-        ],
+        items: ['Python', 'JavaScript/TypeScript', 'Java', 'Bash/Shell scripting'],
       },
       {
         label: 'Frameworks',
@@ -51,14 +46,7 @@ const skills: SkillSection[] = [
     skills: [
       {
         label: 'HTML/CSS',
-        items: [
-          'HTML5',
-          'CSS3',
-          'Tailwind',
-          'Bootstrap',
-          'Skeleton',
-          'Foundation',
-        ],
+        items: ['HTML5', 'CSS3', 'Tailwind', 'Bootstrap', 'Skeleton', 'Foundation'],
       },
       { label: 'APIs', items: ['RESTful APIs', 'JSON-based data exchange'] },
       {
@@ -139,14 +127,7 @@ const skills: SkillSection[] = [
     skills: [
       {
         label: 'Tools / Platforms',
-        items: [
-          'Jira/Zephyr Scale',
-          'Confluence',
-          'Redmine',
-          'Git',
-          'Slack',
-          'Miro',
-        ],
+        items: ['Jira/Zephyr Scale', 'Confluence', 'Redmine', 'Git', 'Slack', 'Miro'],
       },
       { label: 'Methods / Workflows', items: ['Agile', 'Kanban', 'Scrum'] },
       {
