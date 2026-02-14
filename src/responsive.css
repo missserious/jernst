@@ -68,7 +68,6 @@
   /* =====================
    Skills
   ===================== */
-
   .skills-columns {
     display: flex;
     gap: 40px; /* Abstand zwischen den Spalten */
@@ -81,6 +80,10 @@
     gap: 24px; /* Abstand zwischen Sections */
     list-style: none;
     padding: 0;
+  }
+
+  .skills-container {
+    padding: 3rem 2rem 3rem 4rem;
   }
 
   /* =====================
