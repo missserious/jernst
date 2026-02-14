@@ -14,7 +14,7 @@ export function Education() {
       <h3>EDUCATION</h3>
 
       {degrees.map(degree => (
-        <p>
+        <p key={`${degree.level}-${degree.subject}`}>
           <span>{degree.level}</span>
           <span>
             <strong>{degree.subject}</strong>{' '}
