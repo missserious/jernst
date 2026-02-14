@@ -33,29 +33,60 @@ Commit message conventions to keep a clean and readable git history.\
 
 ## TODO / Checklist
 
+### ✅ Commits & Guidelines
+
 - [x] Add commit message guidelines
-- [x] Export commit guidelines to docs/ folder and link from README
-- [ ] Refactor/Improve CSS:
-  - [ ] Mobil first
-  - [ ] Fully responsive
-  - [ ] Clean up CSS: font, color, spacing
-  - [ ] Refactor CSS: dark mode
-- [ ] Include Icons: linkedIn and github
-- [ ] Refactor Main.tsx
-- [ ] Research: VSC Plugig, highlighting unused vars, classes...
-- [ ] PWA Support:
-  - [x] Make website installable as PWA (create manifest file)
-  - [ ] Include button to install PWA
-  - [ ] Make PWA offline usable (create service worker)
-  - [ ] Optional: Use vite-plugin-pwa
-- [ ] Migrate custom CSS to Tailwind CSS for styling
-- [ ] Protect main branch and allow merging only via pull requests
+- [x] Export commit guidelines to `docs/` folder and link from README
+
+### 🎨 CSS / Styling
+
+- [x] Mobile first design
+- [x] Fully responsive
+- [ ] Clean up CSS: font, color, spacing
+- [ ] Refactor CSS for dark mode
+- [ ] Migrate custom CSS to Tailwind CSS
+
+### 🖼️ Icons & UI
+
+- [x] Include social icons: LinkedIn and GitHub
+- [x] Refactor `Main.tsx`
+- [ ] Typewriter effect in Welcome section
+
+### 🛠️ Dev Tools & Workflow
+
+- [ ] Research VSCode plugins (highlight unused vars, classes, etc.)
+- [ ] Protect `main` branch; allow merging only via pull requests
 - [ ] Add Prettier checks to GitHub Actions pipeline
+- [ ] Add ESLint checks to GitHub Actions pipeline
+- [ ] Extend development guidelines (branching, PRs, code style, testing)
+
+### 🌐 PWA (Progressive Web App)
+
+- [x] Make website installable as PWA (manifest file)
+- [ ] Include install button for PWA
+- [ ] Make PWA offline usable (service worker)
+- [ ] Optional: use `vite-plugin-pwa`
+
+### 🌍 SEO & Analytics
+
 - [ ] Refactor SEO Open Graph tags
 - [ ] Implement React internationalization (i18n)
 - [ ] Implement Analytics
-- [ ] Include tests for components, e.g. snapshot tests
-- [ ] Extend development guidelines (branching, PRs, code style, testing)
-- [ ] Typewriter Effect - welcome section
-- [ ] Implementing Routing: HashRouter or BrowserRouter
-- [ ] Print Version
+
+### 🔬 Testing
+
+- [ ] Include tests for components (e.g., snapshot tests)
+
+### 🚦 Routing
+
+- [ ] Implement routing: `HashRouter` or `BrowserRouter`
+- [ ] Add 404 page / NotFound component for unknown routes
+  - Ensure it works locally and on GitHub Pages
+
+### 🖨️ Print
+
+- [ ] Print version
+
+### 🏷️ Versioning / Git Notes
+
+- [ ] Tag branch as `v0.1.0` when design is stable and ready for showcase
