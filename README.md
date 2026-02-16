@@ -5,9 +5,10 @@ This is the new version of my website, built with **React**, **TypeScript**, and
 ## Features
 
 - ⚡ Minimal Vite + React + TypeScript setup
-- 🚀 Automatic deployment to GitHub Pages via GitHub Actions
+- ⚙️ Automatic deployment to GitHub Pages via GitHub Actions
 - 🛠️ Prettier and ESLint configured for consistent code style
 - 📱 Installable Progressive Web App (PWA)
+- 🧪 Unit testing with **Jest** <!-- and coverage reporting -->
 
 <!--
 ## Template Usage
@@ -21,7 +22,7 @@ You can reuse this setup in new projects by cloning the repo and adapting the co
 
 The website is automatically deployed on every push to the `main` branch.
 
-[Live Version](https://missserious.github.io/jernst)
+🚀 **[Live Version](https://missserious.github.io/jernst)**
 
 ## Local Development
 
@@ -33,10 +34,24 @@ npm install
 npm run dev
 ```
 
+## Tests
+
+This project uses **Jest** for unit testing.
+
+### Run tests
+
+```bash
+# Locally
+npm run test
+
+# For CI / with coverage:
+npm run test:ci
+```
+
 ## Commit & Development Guidelines
 
 Commit message conventions to keep a clean and readable git history.\
-➡️ See the full guidelines here:  
+➡️ See the full guidelines here:
 [Commit Guidelines](docs/commit_guidelines.md)
 
 ## TODO / Checklist
@@ -83,7 +98,9 @@ Commit message conventions to keep a clean and readable git history.\
 
 ### 🔬 Testing
 
-- [ ] Include tests for components (e.g., snapshot tests)
+- [x] Include jest framework and sample tests
+- [ ] Jest: Include npm run test:ci fpr CI pipeline
+- [ ] Include snapshot tests
 
 ### 🚦 Routing
 
@@ -105,3 +122,7 @@ Commit message conventions to keep a clean and readable git history.\
   - ESLint / Prettier / Vite / React / TypeScript setup ready to go
   - Include basic components, routing, PWA, and testing setup
   - Document setup and usage in README
+
+```
+
+```
