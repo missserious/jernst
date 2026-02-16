@@ -1,3 +1,5 @@
+import { formatPhone } from '../utils/formatContact';
+
 type FooterProps = {
   name?: string;
   location?: string;
@@ -14,7 +16,8 @@ export default function Footer({
   separator = ' >> ',
 }: FooterProps) {
   // Remove spaces for tel link
-  const mobilLink = `tel:${mobil.replace(/\s+/g, '')}`;
+  const mobilLink = `tel:${formatPhone(mobil)}`;
+
   // Replace @ with (at) for display
   const emailDisplay = email.replace('@', '(at)');
 

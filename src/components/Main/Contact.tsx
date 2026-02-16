@@ -10,7 +10,7 @@ export function Contact({
   email = 'Julia_Ernst@gmx.de',
 }: ContactProps) {
   // Remove spaces for tel link
-  const mobilLink = formatPhone(mobil);
+  const mobilLink = `tel:${formatPhone(mobil)}`;
   // Replace @ with (at) for display
   const emailDisplay = email.replace('@', '(at)');
 
