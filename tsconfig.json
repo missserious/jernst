@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext", // Output modern JavaScript; Vite handles latest features
     "module": "ESNext", // Use native ES modules, compatible with Vite
+    "types": ["jest"], // Jest-Typen global verfügbar
     "jsx": "react-jsx", // Use React 17+ JSX transform
     "strict": true, // Enable all strict type checks (includes noImplicitAny, strictFunctionTypes, etc.)
     "strictNullChecks": true, // Ensure proper handling of null / undefined
@@ -22,8 +23,5 @@
     "noErrorTruncation": true // Show full error messages instead of truncated ones
   },
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }

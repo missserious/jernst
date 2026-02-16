@@ -1,3 +1,5 @@
+import { formatPhone } from '../../utils/formatContact';
+
 type ContactProps = {
   mobil?: string;
   email?: string;
@@ -8,9 +10,10 @@ export function Contact({
   email = 'Julia_Ernst@gmx.de',
 }: ContactProps) {
   // Remove spaces for tel link
-  const mobilLink = `tel:${mobil.replace(/\s+/g, '')}`;
+  const mobilLink = formatPhone(mobil);
   // Replace @ with (at) for display
   const emailDisplay = email.replace('@', '(at)');
+
   return (
     <section className="contact">
       <h2>CONTACT ME</h2>
