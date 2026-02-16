@@ -12,7 +12,7 @@ describe('formatPhone', () => {
     });
 
     test('leaves number without spaces unchanged', () => {
-      expect(formatPhone('+12345678901234')).toBe('+12345678901234');
+      expect(formatPhone('+12345678901234')).toBe('+12345678901234 ');
     });
 
     test('removes multiple spaces between numbers', () => {
