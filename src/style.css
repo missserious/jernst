@@ -394,6 +394,93 @@ footer {
 }
 
 /* =====================
+   Button
+===================== */
+/* .install-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  padding: 12px 20px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  color: #222;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.install-button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+} */
+
+/* =====================
+   Button
+===================== */
+.install-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Icon bleibt rechts */
+
+  height: 48px;
+  width: 48px;
+  padding: 0 14px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  color: #222;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition:
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.install-button:hover {
+  width: 150px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Icon bleibt rechts durch flex-end */
+.icon {
+  flex-shrink: 0;
+}
+
+/* Text */
+.text {
+  margin-right: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+.install-button:hover .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =====================
    Typografie / Listen
 ===================== */
 h3 {
@@ -431,4 +518,11 @@ hr {
   height: 1px;
   background-color: var(--color-hr);
   margin: 2rem 0;
+}
+
+button {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  padding-bottom: 1em;
 }

@@ -8,7 +8,7 @@ This is the new version of my website, built with **React**, **TypeScript**, and
 - ⚙️ Automatic deployment to GitHub Pages via GitHub Actions
 - 🛠️ Prettier and ESLint configured for consistent code style
 - 📱 Installable Progressive Web App (PWA)
-- 🧪 Unit testing with **Jest** <!-- and coverage reporting -->
+- 🧪 Unit testing with Jest <!-- and coverage reporting -->
 
 <!--
 ## Template Usage
@@ -44,8 +44,8 @@ This project uses **Jest** for unit testing.
 # Locally
 npm run test
 
-# For CI / with coverage:
-npm run test:ci
+# TODO: For CI / with coverage:
+# npm run test:ci
 ```
 
 ## Commit & Development Guidelines
@@ -100,7 +100,7 @@ Commit message conventions to keep a clean and readable git history.\
 
 - [x] Include jest framework and sample tests
 - [ ] Jest: Include npm run test:ci fpr CI pipeline
-- [ ] Include snapshot tests
+- [ ] Include snapshot tests, playwright or cypress.
 
 ### 🚦 Routing
 
