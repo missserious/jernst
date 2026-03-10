@@ -1,7 +1,7 @@
 {
-  "name": "Julia Ernst: New webpage, implemented with React, TypeScript and Github Actions as Progressive Web App",
+  "name": "Julia Ernst Webpage 2.0",
   "short_name": "JEApp",
-  "description": "New webpage, implemented with React, TypeScript and Github Actions as Progressive Web App",
+  "description": "Personal webpage implemented with React, TypeScript and Github Actions as Progressive Web App",
   "start_url": "/jernst/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],

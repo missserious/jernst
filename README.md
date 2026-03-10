@@ -60,6 +60,8 @@ Commit message conventions to keep a clean and readable git history.\
 
 - [x] Add commit message guidelines
 - [x] Export commit guidelines to `docs/` folder and link from README
+- [ ] VSC Plugins readme and workspace extention recommendations.
+- [ ] .editorconfig
 
 ### 🎨 CSS / Styling
 
@@ -86,9 +88,14 @@ Commit message conventions to keep a clean and readable git history.\
 ### 🌐 PWA (Progressive Web App)
 
 - [x] Make website installable as PWA (manifest file)
-- [ ] Include install button for PWA
-- [ ] Make PWA offline usable (service worker)
-- [ ] Optional: use `vite-plugin-pwa`
+- [x] Include install button for PWA
+- [x] Make PWA offline usable (service worker)
+  - [x] Create service worker
+  - [x] Register service worker
+  - [x] Test serivce worker
+    - [x] Issue: auto-generated files in /assets have hashes in their names - see comment in service-workers.js
+  - [ ] Add a small offline fallback page so the app doesn't crash when the cache is missing and the user is offline.
+- [ ] Optional: use `vite-plugin-pwa` - solution for Issue: Issue: auto-generated files
 
 ### 🌍 SEO & Analytics
 
