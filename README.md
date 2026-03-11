@@ -1,6 +1,9 @@
 # Julia Ernst – New Website
 
-This is the new version of my website, built with **React**, **TypeScript**, and **Vite**.
+<!-- TEST -->
+
+- <img src="docs/icons-export/flash.svg" width="20" title="Minimal setup" /> Minimal Vite + React + TypeScript setup
+- <img src="docs/icons-export/jest.svg" width="20" title="Jest" /> Unit testing with Jest
 
 ## Features
 
@@ -119,9 +122,10 @@ Commit message conventions to keep a clean and readable git history.\
 
 - [ ] Print version
 
-### 🏷️ Versioning / Git Notes
+### 🏷️ Versioning / Git Notes / Docs
 
 - [ ] Tag branch as `v0.1.0` when design is stable and ready for showcase
+- [ ] Make docu/strategie for dependency update/upgrade
 
 ### 📦 Project Template
 
