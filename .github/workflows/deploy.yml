@@ -33,8 +33,11 @@ jobs:
           cache: 'npm'
 
       # Install Dependencies
+      # NOTE: --legacy-peer-deps is required temporarily because some ESLint plugins
+      #       (like eslint-plugin-import) have peerDependencies incompatible with ESLint 10.
+      #       Once upstream packages update their peerDeps, this flag can be removed.
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
         # Run Jest tests before build
         # TODO: npm run test:ci
