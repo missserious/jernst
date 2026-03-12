@@ -6,10 +6,6 @@ on:
     branches:
       - main
 
-# Force the use of Node24
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 # Permissions required for GitHub Pages deployment
 permissions:
   contents: read
@@ -24,6 +20,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env: # Force the use of Node24
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       # Fetch the Code from the Repository
       - name: Checkout Code From Repository
