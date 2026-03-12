@@ -25,11 +25,11 @@ jobs:
     steps:
       # Fetch the Code from the Repository
       - name: Checkout Code From Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Install Node.js + enable npm cache
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: 'npm'
@@ -51,8 +51,8 @@ jobs:
         run: npm run build
 
       # Upload Build output for Deployment
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
