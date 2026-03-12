@@ -60,11 +60,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build # wait for successful build
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       # Deploy to GitHub Pages
+      # TODO: check if node version warning will disappear
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
