@@ -80,7 +80,7 @@ Commit message conventions to keep a clean and readable git history.\
 - [ ] Research VSCode plugins (highlight unused vars, classes, etc.)
 - [ ] Protect `main` branch;
   - [x] Allow merging only via pull requests before merging
-  - [ ] Allow merging only via status checks to pass before merging
+  - [ ] Allow merging only via status checks (build and tests) to pass before merging
 - [ ] Add Prettier checks to GitHub Actions pipeline
 - [ ] Add ESLint checks to GitHub Actions pipeline
 - [ ] Extend development guidelines (branching, PRs, code style, testing)
