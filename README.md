@@ -1,9 +1,10 @@
 # Julia Ernst – New Website
 
-<!-- TEST -->
+<!-- TEST
 
 - <img src="docs/icons-export/flash.svg" width="20" title="Minimal setup" /> Minimal Vite + React + TypeScript setup
 - <img src="docs/icons-export/jest.svg" width="20" title="Jest" /> Unit testing with Jest
+ -->
 
 ## Features
 
@@ -87,6 +88,7 @@ Commit message conventions to keep a clean and readable git history.\
 - [ ] Add Prettier checks to GitHub Actions pipeline
 - [ ] Add ESLint checks to GitHub Actions pipeline
 - [ ] Extend development guidelines (branching, PRs, code style, testing)
+- [ ] Update Github Actions v4 to v6
 
 ### 🌐 PWA (Progressive Web App)
 
