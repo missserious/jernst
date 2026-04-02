@@ -94,10 +94,14 @@ Commit message conventions to keep a clean and readable git history.\
 - [x] Make PWA offline usable (service worker)
   - [x] Create service worker
   - [x] Register service worker
-  - [x] Test serivce worker
-    - [x] Issue: auto-generated files in /assets have hashes in their names - see comment in service-workers.js
+  - [x] Test self-written Service Worker
+    - [x] Issue: Hash-Assets & Cache-Version
+      - [ ] Auto-generated files in /assets have hashes in their names → they will change after every rebuild
+      - [ ] Cache version should be updated to prevent the browser cache from growing indefinitely
+        - [ ] Solution: manually update cache version or build a workaround in the existing Service Worker
+  - [x] Optional solution: use `vite-plugin-pwa` → solves the issue with auto-generated hashed files and cache version
+
   - [ ] Add a small offline fallback page so the app doesn't crash when the cache is missing and the user is offline.
-- [ ] Optional: use `vite-plugin-pwa` - solution for Issue: Issue: auto-generated files
 
 ### <img src="docs/icons-export/chart.svg" width="20" title="Chart" /> SEO & Analytics
 
